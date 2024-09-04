@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+</head>
+<body>
+<h1> Bat Ball Stump Game</h1>
+<button class="sports" onclick="
+choice=f();
+if(choice==='bat')
+{ 
+    score.tie++
+    storage()
+    result='Game tied!!'
+}
+else if(choice==='ball')
+{
+    
+    score.win++
+    storage()
+    result='user won the game'
+}
+else
+{
+    
+    score.lost++
+    storage()
+    result='computer won the game'
+}
+ alert(`User choice is bat.computer choice is ${choice}.${result}
+ win:${score.win}
+ lost:${score.lost}
+ tie:${score.tie}`)
+">Bat</button>
+
+
+<button class="sports" onclick="
+let choice=f();
+let result;
+if(choice==='bat')
+{
+    score.lost++
+    storage()
+    result='Computer won the game'
+}
+else if(choice==='ball')
+{ 
+    score.tie++
+    storage()
+    result='Game tied!!'
+}
+else
+{
+    score.win++
+    storage()
+    result='user won the game'
+}
+ alert(`User choice is ball.computer choice is ${choice}.${result}
+ win:${score.win}
+ lost:${score.lost}
+ tie:${score.tie}`)
+">Ball</button>
+
+ <button class="sports" onclick="
+ choice=f();
+if(choice==='bat')
+{
+    score.win++
+    storage()
+    result='user won the game'
+}
+else if(choice==='ball')
+{
+    score.lost++
+    storage()
+    result='computer won the game'
+}
+else
+{ 
+    score.tie++
+    storage()
+    result='Game tied!!'
+}
+ alert(`User choice is wicket.computer choice is ${choice}.${result}
+ win:${score.win}
+ lost:${score.lost}
+ tie:${score.tie}`)
+ ">Wicket</button> 
+ <button class="sports" onclick="localStorage.clear() 
+//  score.win=0
+//  score.lost=0
+//  score.tie=0
+
+score={
+  win:0,
+  lost:0,
+  tie:0,
+  };
+ 
+ ">Reset</button>
+<script>
+  let scorestr=localStorage.getItem('score');
+  let score;
+  if(scorestr!==null)
+{
+  score=JSON.parse(scorestr);
+}
+else{
+  score={
+  win:0,
+  lost:0,
+  tie:0,
+  };
+}
+    
+  function f() {
+    let random=Math.random()*3;
+    if(random>0 && random<=1)
+    {
+      return 'bat';
+    }
+    else if(random>1 && random<=2)
+    {
+      return 'ball';
+    }
+    else
+    {
+      return 'wicket';
+    }
+    
+  }
+  function storage()
+  {
+    localStorage.setItem('score',JSON.stringify(score))
+  }
+</script>
+</body>
+</html>

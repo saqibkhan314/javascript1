@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="cal.css">
+  <title>calculator</title>
+</head>
+<body>
+  <div id="calculator">
+    <input type="text" id="display" readonly>
+    <button class="input" onclick="curntdisp=''; document.querySelector('#display').value=curntdisp;">c</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'1'; document.querySelector('#display').value=curntdisp;">1</button>
+    <button class="input" onclick="curntdisp=curntdisp+'2'; document.querySelector('#display').value=curntdisp;">2</button>
+    <br>
+    <button class="input" onclick="curntdisp=curntdisp+'+'; document.querySelector('#display').value=curntdisp;">+</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'3'; document.querySelector('#display').value=curntdisp;">3</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'4'; document.querySelector('#display').value=curntdisp;">4</button>
+    <br>
+    <button class="input" onclick="curntdisp=curntdisp+'-'; document.querySelector('#display').value=curntdisp;">-</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'5'; document.querySelector('#display').value=curntdisp;">5</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'6'; document.querySelector('#display').value=curntdisp;">6</button>
+    <br>
+    <button class="input" onclick="curntdisp=curntdisp+'*'; document.querySelector('#display').value=curntdisp;">*</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'7'; document.querySelector('#display').value=curntdisp;">7</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'8'; document.querySelector('#display').value=curntdisp;">8</button>
+    <br>
+    <button class="input" onclick="curntdisp=curntdisp+'/'; document.querySelector('#display').value=curntdisp;">/</button> 
+    <button class="input" onclick="curntdisp=eval(curntdisp); document.querySelector('#display').value=curntdisp;">=</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'9'; document.querySelector('#display').value=curntdisp;">9</button>
+    <br>
+    <button class="input" onclick="curntdisp=curntdisp+'0'; document.querySelector('#display').value=curntdisp;">0</button> 
+    <button class="input" onclick="curntdisp=curntdisp+'.'; document.querySelector('#display').value=curntdisp;">.</button>
+
+
+  </div>
+  <script>
+    let curntdisp='';
+    document.querySelector('#display').value=curntdisp;
+  </script>
+</body>
+</html>

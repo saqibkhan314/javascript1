@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>json</title>
+</head>
+<body>
+  <script>
+     let product={
+      company:'mango',
+      item_name:'shirt',
+      price:569,
+      rating:{
+        stars:4.5,
+        no_of_reviews: 23
+      }
+    };
+    let a=JSON.stringify(product);
+    console.log(a);
+    let b=JSON.parse(a);
+    console.log(b);
+  </script>
+</body>
+</html>

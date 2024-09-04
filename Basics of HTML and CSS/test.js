@@ -1,0 +1,1 @@
+console.log("First i will be run after that other script tags funt will be running");
